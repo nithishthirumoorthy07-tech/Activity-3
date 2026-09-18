@@ -32,6 +32,8 @@ jobs:
         
       - name: Build with Vite
         working-directory: ./frontend
+        env:
+          VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
         run: npx vite build --base=/Activity-3/
         
       - name: Setup Pages
